@@ -1,0 +1,23 @@
+
+.areaL .searchIco	{ color:#bc3096 !important; }
+.areaR .newIco		{ color:#bc3096 !important; }
+.areaR .newIco		{ color:#bc3096 !important; }
+.pointFontClass	{ color:#bc3096; }
+.btn, input[type=submit] { background-color: #cd02a0; border-color: #a0027d; }
+.btn:active, .btn:hover, input[type=submit]:active, input[type=submit]:hover { background-color: #ad0587; border-color: #a0027d; }
+.bottomLine	{ background:#a2147d; }
+.subNavMenu li a{ background:#bc0384; }
+.subNavMenu li a:hover{ background:#d7179c; }
+.listArea .titleBox h2 a:hover{ color:#8a1f66; }
+
+.itemTitle{ background-image:url(itemTitleBg.jpg); }
+.itemTitle2 span{ background:url(more.gif) no-repeat; }
+.listArrow3 ul li	{ background:url(arrow3.gif) no-repeat 3px 8px;}
+.replyBox .replyBtn	{ background:url(replyBtn.gif); }
+.replyFullBox .replyBtn	{ background:url(replyBtn.gif); }
+.messageBox .replyBtn	{ background:url(messageBtn.gif); }
+
+/* 内容页左右侧翻页 START */
+a.pagePrev,a.pageNext{ background:url(arrow.gif) no-repeat; }
+a.pageNext{ background-position:0 -300px; }
+/* 内容页左右侧翻页 END */

@@ -1,0 +1,24 @@
+{otcms:include file="top.html"}
+
+<div class="htmlBody">
+<div class="height10"></div>
+<div class="clr"></div>
+
+<div class="mainBody">
+	<div class="areaL subWebLR" id="newsList">
+
+		{otcms:diyFunc action='NewsList' areaName={otcms:$itemName} mode={otcms:$itemMode} num={otcms:$itemNum} typeStr={otcms:$itemTypeStr} level={otcms:$itemLevel}}
+
+	</div>
+	<div class="areaR">
+	
+		{otcms:include file="news_right.html"}
+
+	</div>
+	<div class="clr"></div>
+</div>
+</div>
+<div class="clr"></div>
+
+
+{otcms:include file="bottom.html"}

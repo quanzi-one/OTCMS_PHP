@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="site_{otcms:$webTypeName}">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset={otcms:$siteCharset}" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<title>{otcms:$siteName}</title>
+	<meta name="keywords" content="{otcms:$siteKeywords}" />
+	<meta name="description" content="{otcms:$siteDescription}" />
+	{otcms:$siteBaseTag}
+	<link rel="icon" href="{otcms:$webPathPart}favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="{otcms:$webPathPart}favicon.ico" type="image/x-icon" />
+	{otcms:if $tplSysArr.TS_isRss == 1}
+	<link rel="alternate" type="application/rss+xml" title="{otcms:$sysArr.SYS_title} RSS Feed" href="{otcms:$webPathPart}rss.php?typeStr=&maxNum=50" />
+	{otcms:/if}
+
+	<script language="javascript" type="text/javascript">
+	var webTypeName='{otcms:$webTypeName}';
+	var webDataID='{otcms:$webDataID}';
+	var dbPathPart='{otcms:$dbPathPart}';
+	var webPathPart='{otcms:$webPathPart}';
+	var jsPathPart='{otcms:$jsPathPart}';
+	var wapUrl='{otcms:$wapUrl}';
+	</script>
+	<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}js/inc/jquery.min.js?v={otcms:$siteVer}"></script>
+	<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}js/inc/common.js?v={otcms:$siteVer}"></script>
+	<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}cache/js/configJs.js?v={otcms:$siteVer}&v2={otcms:$sysArr.SYS_jsTimeStr}"></script>
+	<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}cache/js/OTca.js?v={otcms:$sysArr.SYS_adTimeStr}"></script>
+
+	<link rel="stylesheet" href="{otcms:$currTplDir}skin/{otcms:$tplSysArr.TS_skinName}/style.css?v={otcms:$siteVer}" type="text/css" media="all" id="webSkin" />
+	<link rel="stylesheet" href="{otcms:$currTplDir}skin/navMenu{otcms:$tplSysArr.TS_navNum}.css?v={otcms:$siteVer}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{otcms:$webPathPart}cache/web/site.css?v={otcms:$siteVer}" type="text/css" media="all" />
+
+	{otcms:if $tplSysArr.TS_navNum == 0}
+	<style type='text/css'>
+	.mainMenu .topnav .a	{ width:auto;_width:0;white-space:nowrap;overflow:visible; padding:0 {otcms:$tplSysArr.TS_navPadd}px 0 {otcms:$tplSysArr.TS_navPadd}px; }
+	.mainMenu .topnav .b	{ width:auto;_width:0;white-space:nowrap;overflow:visible; padding:0 {otcms:$tplSysArr.TS_navPadd}px 0 {otcms:$tplSysArr.TS_navPadd}px; }
+	.mainMenu .topnav .b .itemMenu		{ float:left;white-space:nowrap;overflow:visible; }
+	.mainMenu .topnav .b .itemMenu a	{ float:left;white-space:nowrap;overflow:visible; }
+	.topnav li ul.subnav		{ width:{otcms:$tplSysArr.TS_navSubWidth}px; }
+	.topnav li ul.subnav li		{ width:{otcms:$tplSysArr.TS_navSubWidth}px; }
+	.topnav li ul.subnav li a	{ width:{otcms:$tplSysArr.TS_navSubWidth}px; }
+	</style>
+	{otcms:/if}
+
+	{otcms:if $webTypeName == "home" && $tplSysArr.TS_homeFlashMode == 5}
+	<link type='text/css' rel='stylesheet' href='{otcms:$webPathPart}tools/imgTrun/imgTrun5.css'>
+	<style type='text/css'>
+	.FocusImg .TitileBg, .FocusImg .NumberItemBg {background-color:{otcms:$tplSysArr.TS_skinColor};}
+	</style>
+	{otcms:/if}
+
+</head>
+<body style="{otcms:$webBodyStyleStr}" {otcms:$webBodyStr}>
+
+{otcms:$areaTop1}
+
+<a name="toTop"></a>
+<div class="htmlBodyTop">
+<div class="topBody">
+	<div class="topMenu list">
+	<ul>
+		<li class="a list">
+			<ul>
+				<li>
+					<span id="topUserBox"></span>
+				</li>
+			</ul>
+		</li>
+		<li class="b">
+			{otcms:$wapBtnStr}
+			{otcms:if $tplSysArr.TS_isRss == 1}
+			<a href="{otcms:$webPathPart}rss.php?mudi=web" target="_blank"><img src="{otcms:$webPathPart}inc_img/rss.gif" alt="RSS订阅" style="margin:8px 0 0 4px;cursor:pointer;float:right;" /></a>
+			{otcms:/if}
+			<span onclick="document.location.href='{otcms:$webPathPart}deal.php?mudi=desktopUrl';" title="保存到桌面" class="font1_2d pointer">保存到桌面</span>&ensp;
+			<span onclick="AddFavorite(document.location.href,document.title);" title="加入收藏" class="font1_2d pointer">加入收藏</span>&ensp;
+			<span id="setHomeA" onclick="SetHome($id('setHomeA'),document.location.href);" title="设为首页" class="font1_2d pointer">设为首页</span>
+		</li>
+	</ul>
+		<span id='wapQrBox' style='width:152px;position:relative;float:right;z-index:99999;display:none;'></span>
+	</div>
+	<div class="clr"></div>
+</div>
+</div>
+
+<div class="{otcms:if $tplSysArr.TS_navWidthMode == 0}topFullLogo{otcms:else}htmlBody{otcms:/if}">
+<div class="topBody">
+	<div class="topLogo list">
+		{otcms:if $tplSysArr.TS_topLogoMode == 1}
+			{otcms:$siteLogo}{otcms:elseif $tplSysArr.TS_topLogoMode == 2}
+			<ul>
+				<li class="a">{otcms:$siteLogo}</li><li class="caClass bc"><div class="ca21Style"><script type="text/javascript">OTca('ot021');</script></div></li>
+			</ul>
+		{otcms:else}
+			{otcms:if $tplSysArr.TS_topLogoMode == 4}
+			<div class="ca23Style"><script type="text/javascript">OTca('ot023');</script></div>
+			{otcms:else}
+			<ul>
+				<li class="a">{otcms:$siteLogo}</li><li class="caClass b"><div class="ca1Style"><script type="text/javascript">OTca('ot001');</script></div></li>
+				<li class="caClass c"><div class="ca2Style"><script type="text/javascript">OTca('ot002');</script></div></li>
+			</ul>
+			{otcms:/if}
+		{otcms:/if}
+	</div><div class="clr"></div>
+
+	{otcms:if $tplSysArr.TS_navMode == 0}
+		{otcms:$tplSysArr.TS_navCode}
+	{otcms:elseif $tplSysArr.TS_navWidthMode == 1}
+		<div class="mainMenu">
+			{otcms:diyFunc action='NavMenu' num={otcms:$tplSysArr.TS_navNum}}
+		</div>
+	{otcms:else}
+	<div class="clr"></div>
+</div>
+</div>
+		<div class="fullMenu">
+		<div class="mainMenuBox">
+			{otcms:diyFunc action='NavMenu' num={otcms:$tplSysArr.TS_navNum}}
+		</div>
+		</div>
+
+<div class="htmlBody">
+<div class="topBody">
+	{otcms:/if}
+
+	<div class="clr"></div>
+</div>
+</div>
+
+
+{otcms:if $webTypeName == "home"}
+	{otcms:diyFunc action='NavBanner' }
+{otcms:/if}
+
+
+<div class="htmlBody"><div class="clr"></div>
+<div class="topBody">
+	<div class="caClass">
+		<div class="ca3Style"><script type="text/javascript">OTca('ot003');</script></div>
+		{otcms:$siteTopAdCode}
+		<div class="ca4Style"><script type="text/javascript">OTca('ot004');</script></div>
+	</div>
+	<div class="clr"></div>
+	{otcms:$areaTop2}
+</div>
+</div>
+
+<div class="htmlBody"><div class="clr"></div>
+<div class="topBody">
+	<div class="searchBox list">
+	<ul>
+		<li class="a">
+			{otcms:diyFunc action='MarInfoBox' width='590' num={otcms:$tplSysArr.TS_marInfoNum}}
+		</li>
+		<li class="b">
+			<div>
+			<form id="referForm" name="referForm" method="get" action="" onsubmit="return CheckRefForm()">
+			<input type="hidden" id="mudi2" name="mudi2" value="refer" />
+			<input type="button" class="searchImg button" value="" />
+			<input type="text" id="refContent" name="refContent" class="searchInput" value="" />
+			<select id="refMode" name="refMode" class="searchSelect" style="width:120px;">
+				{otcms:$searchAreaStr}
+			</select>
+			<input type="submit" class="searchBtn button" value="" />
+			</form>
+			</div>
+			{otcms:$searchHiddenStr}
+		</li>
+	</ul>
+	</div>
+	<div class="clr"></div>
+
+	{otcms:$areaTop3}
+</div>
+</div>
+<div class="clr"></div>

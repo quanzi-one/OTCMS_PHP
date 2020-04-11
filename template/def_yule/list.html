@@ -1,0 +1,38 @@
+{otcms:include file="top.html"}
+
+<div class="subArea">
+	<div class="subAreaL">
+		<div class="itemBox">
+			<div class="itemTitle">&nbsp;&nbsp;&nbsp;{otcms:$itemName}</div>
+			<div class="itemContent">
+				{otcms:if $rightMenuItemID>0 && $isRightMenu>0}
+					<ul class="subNavMenu">
+						{otcms:diyFunc action='SubRightNavMenu' typeID={otcms:$rightMenuItemID}}
+					</ul>
+					<div class="xuLine"></div>
+				{otcms:/if}
+
+				<form id="referForm" name="referForm" method="get" action="" onsubmit="return CheckRefForm()" class="textCenter">
+				<input type="hidden" id="mudi2" name="mudi2" value="refer" />
+				<input type="hidden" id="refMode" name="refMode" value="theme" />
+				<input type="text" id="refContent" name="refContent" value="">
+				<input type="submit" value="搜索">
+				</form>
+				<div class="xuLine"></div>
+
+				{otcms:if $itemMode==7 || $itemMode==2 || $itemMode==3 || $itemMode==4}
+					<div class="listBox{otcms:$itemMode}">
+					{otcms:diyFunc action='NewsListMode' listInfo="{otcms:$itemListInfo}" mode={otcms:$itemMode} num={otcms:$itemNum} typeStr={otcms:$itemTypeStr} level={otcms:$itemLevel}}
+					</div>
+				{otcms:else}
+					{otcms:diyFunc action='AppTplYule_NewsList' paraStr="{otcms:$itemName},{otcms:$itemMode},{otcms:$itemNum},{otcms:$itemTypeStr},{otcms:$itemLevel}"}
+				{otcms:/if}
+			</div>
+		</div>
+	</div>
+	<div class="subAreaR">
+		{otcms:include file="news_right.html"}
+	</div>
+</div>
+
+{otcms:include file="bottom.html"}

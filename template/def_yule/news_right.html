@@ -1,0 +1,53 @@
+<div class="caClass rightCa0 ca11Style"><script type="text/javascript">OTca('ot011');</script></div>
+<div class="clr"></div>
+
+{otcms:if $rightItemNewNum>0}
+	<div class="itemBox">
+		<div class="itemTitle">&nbsp;&nbsp;&nbsp;本栏最新更新</div>
+		<div class="itemContent">
+			<dl class="newListDL newListLi">
+				<dd>
+					{otcms:diyFunc action='FontItem' type="new{otcms:$rightItemID}" level={otcms:$rightItemLevel} num={otcms:$rightItemNewNum} isDate='1' isType='0'}
+				</dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="caClass rightCa0 ca15Style"><script type="text/javascript">OTca('ot015');</script></div><div class="clr"></div>
+	<div class="height5"></div>
+	<div class="clr"></div>
+{otcms:/if}
+
+{otcms:if $rightItemRecomNum>0}
+	<div class="itemBox">
+		<div class="itemTitle">&nbsp;&nbsp;&nbsp;本栏推荐</div>
+		<div class="itemContent">
+			<dl class="newListDL newListLi">
+				<dd>
+					{otcms:diyFunc action='FontItem' type="recom{otcms:$rightItemID}" level={otcms:$rightItemLevel} num={otcms:$rightItemRecomNum} isDate='0' isType='0'}
+				</dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="height5"></div>
+	<div class="clr"></div>
+{otcms:/if}
+
+{otcms:if $rightItemHotNum>0}
+	<div class="itemBox">
+		<div class="itemTitle">&nbsp;&nbsp;&nbsp;阅读排行</div>
+		<div class="itemContent">
+			<dl class="newListDL newListLi">
+				<dd>
+					{otcms:diyFunc action='FontItem' type="readNum{otcms:$rightItemID}" level="{otcms:$rightItemLevel}" num={otcms:$rightItemHotNum} isDate='0' isType='0'}
+				</dd>
+			</dl>
+		</div>
+	</div>
+{otcms:/if}
+
+<div class="floatWin caClass rightCa0 ca12Style">
+	<script type="text/javascript">OTca('ot012');</script>
+</div>
+<div class="clr"></div>

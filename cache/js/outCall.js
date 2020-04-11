@@ -1,0 +1,36 @@
+
+		$id('typeStr').value='';
+		$id('isNew').checked=0;
+		$id('isHomeThumb').checked=0;
+		$id('isThumb').checked=0;
+		$id('isFlash').checked=0;
+		$id('isImg').checked=0;
+		$id('isMarquee').checked=0;
+		$id('isRecom').checked=0;
+		$id('isTop').checked=0;
+		$id('isImgNews').checked=1;
+		$id('imgW').value='0';
+		$id('imgH').value='0';
+		$id('imgTheme').checked=0;
+		$id('rows').value='5';
+		$id('cols').value='10';
+		$id('maxLen').value='0';
+		$id('rowHeight').value='0';
+		$id('isShowTime').value='4';
+		$id('orderSort').value='time';
+		$id('width').value='';
+		$id('height').value='';
+		$id('bgColor').value='';
+		$id('bgColor').style.color='';
+		$id('fontSize').value='0';
+		$id('fontColor').value='';
+		$id('fontColor').style.color='';
+		$id('font1Size').value='0';
+		$id('font1Color').value='';
+		$id('font1Color').style.color='';
+		$id('font1U').checked=0;
+		$id('font2Size').value='0';
+		$id('font2Color').value='';
+		$id('font2Color').style.color='';
+		$id('font2U').checked=0;
+		

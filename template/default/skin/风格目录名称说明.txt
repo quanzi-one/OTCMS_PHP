@@ -1,0 +1,11 @@
+以下为官方7种风格的对应目录名：
+
+def_black   官方_黑    
+def_blue    官方_蓝
+def_green   官方_绿
+def_pink    官方_粉红
+def_purple  官方_紫
+def_yellow  官方_黄
+default     官方_红(默认)
+user_goumiji	橙黄风格（用户分享）
+user_inkWash	水墨风格（用户分享）

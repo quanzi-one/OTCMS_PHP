@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+	<!-- 模板名称 -->
+	<name>官网_娱乐资源</name>
+
+	<!-- 适用版本 -->
+	<version>-</version>
+
+	<!-- 演示网址 -->
+	<demoUrl>http://otcms.com/go/?tpl_yule</demoUrl>
+
+	<!-- 作者 -->
+	<author>网钛科技</author>
+
+	<!-- 作者网址 -->
+	<site>http://otcms.com/</site>
+
+	<!-- 自定义列表页文件集，多个用","隔开，文件必须以list开头，如list2.html或listGood.html -->
+	<listFile></listFile>
+	<!-- 自定义列表页文件集对应的名称，多个用","隔开 -->
+	<listFileNote></listFileNote>
+
+	<!-- 自定义内容页文件集，多个用","隔开，文件必须以news开头，如news2.html或newsGood.html -->
+	<newsFile></newsFile>
+	<!-- 自定义内容页文件集对应的名称，多个用","隔开 -->
+	<newsFileNote></newsFileNote>
+
+	<!-- 自定义单篇页文件集，多个用","隔开，文件必须以web开头，如web2.html或webGood.html -->
+	<webFile></webFile>
+	<!-- 自定义单篇页文件集对应的名称，多个用","隔开 -->
+	<webFileNote></webFileNote>
+</info>

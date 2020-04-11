@@ -1,0 +1,122 @@
+{otcms:include file="top.html"}
+
+<input type="hidden" id="contentImgMaxWidth" name="contentImgMaxWidth" value="1000" />
+
+<div class="subArea">
+	<div class="subAreaL" style="width:100%;">
+		<div class="itemBox">
+			<div class="itemContent webBox">
+				{otcms:$paraTag}
+				<div class="titleBox textCenter title"><h1>{otcms:$IF_theme}</h1></div>
+				<div class="newsAddi textCenter">
+					<ul class="newsFontSel">
+					<li><a href="javascript:FontZoom(14)" title="默认字体">小</a></li>
+					<li><a href="javascript:FontZoom(16)" title="加大字体">中</a></li>
+					<li><a href="javascript:FontZoom(18)" title="超大字体">大</a></li>
+					</ul>
+					{otcms:if $infoSysArr.IS_isTime==1}<span class="newsTime" title="时间"><i class="icon-calendar"></i>{otcms:$IF_time}</span>&ensp;{otcms:/if}
+					{otcms:if $infoSysArr.IS_isWriter==1}<span class="newsWriter" title="作者"><i class="icon-user"></i><a>{otcms:$IF_writer}</a></span>&ensp;{otcms:/if}
+					{otcms:if $infoSysArr.IS_isSource==1}<span title="来源"><i class="icon-link-1"></i>{otcms:$IF_source}</span>&ensp;{otcms:/if}
+					{otcms:if $infoSysArr.IS_isReadNum==1}<span title="阅读量"><i class="icon-eye"></i><span id="infoReadNum">{otcms:$IF_readNum}</span></span>&ensp;{otcms:/if}
+					{otcms:if $infoSysArr.IS_isReplyNum==1}<span title="评论数"><i class="icon-chat"></i><span id="infoReplyNum">{otcms:$IF_replyNum}</span></span>{otcms:/if}
+				</div>
+				<div class="xuLine"></div>
+
+				<script language="javascript" type="text/javascript">AjaxGetDeal("{otcms:$webPathPart}deal_js.php?mudi=newsDeal&dataID={otcms:$IF_ID}&isNoReturn={otcms:$isNoReturn}");</script>
+				<div style="margin:2px 0 0 0 auto; width:1024px; overflow:hidden; text-align:center;" class="caClass"><div class="ca16Style"><script type="text/javascript">OTca('ot016');</script></div></div>
+				<div class="clr"></div>
+				<div class="b">
+					{otcms:if $infoSysArr.IS_isContentKey==1}
+						<div class="note">
+							<b>内容摘要：</b>{otcms:$IF_contentKey}
+						</div>
+					{otcms:/if}
+					{otcms:$areaNewsTop1}
+					<div style="float:left; text-align:center;" class="caClass ca17Style"><script type="text/javascript">OTca('ot017');</script></div>
+
+					<div id="newsContent" style="width:1008px;"><div>{otcms:$IF_content}</div></div>
+					<div class="clr"></div>
+
+					{otcms:$areaNewsBottom1}
+					<div style="margin:0 auto; width:1006px; overflow:hidden; text-align:center;" class="caClass"><div class="ca10Style"><script type="text/javascript">OTca('ot010');</script></div></div><br />
+
+					<div class="mark">
+						{otcms:diyFunc action='MarkStr' str="{otcms:$IF_themeKey}"}
+						{otcms:if $infoSysArr.IS_isShareNews==1}<div class='right' style='margin-top:8px;'>{otcms:$infoSysArr.IS_shareNewsCode}</div>{otcms:/if}
+						<div class="clr"></div>
+					</div>
+				</div>
+
+				{otcms:if $infoSysArr.IS_isNewsVote==1 && $IF_voteMode>0}
+					<div id="voteBox" class="d list">
+							{otcms:if $IF_voteMode==11}<center>{otcms:$infoSysArr.IS_newsVoteCode}</center>{otcms:/if}
+					</div>
+					<div style="margin:0 auto; width:1024px; overflow:hidden; text-align:center;" class="caClass"><div class="ca24Style"><script type="text/javascript">OTca('ot024');</script></div></div>
+					<div class="clr"></div>
+				{otcms:/if}
+				
+				{otcms:if $infoSysArr.IS_prevAndNext>0}
+					<div class="c">
+						上一篇：{otcms:$prevWeb}<br />
+						下一篇：{otcms:$nextWeb}
+					</div>
+				{otcms:/if}
+			</div>
+		</div>
+
+		{otcms:if $infoSysArr.IS_isMarkNews>0 && $IF_isMarkNews>0}
+			<div style="width:1036px; overflow:hidden; text-align:center;" class="caClass"><div class="ca25Style"><script type="text/javascript">OTca('ot025');</script></div></div>
+			<div class="clr"></div>
+
+			<div class="itemBox">
+				<div class="itemTitle">&nbsp;&nbsp;&nbsp;相关文章</div>
+				<div class="itemContent">
+					<dl class="newListDL newListLi markBox markFullBox">
+					<dd class="listArrow3">
+						<ul>
+							{otcms:diyFunc action='MarkNews' newsId="{otcms:$IF_ID}" markStr="{otcms:$IF_themeKey}" markIdStr="{otcms:$IF_themeKeyIdStr}" num="10"}
+						</ul>
+					</dd>
+					</dl>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="clr"></div>
+		{otcms:/if}
+
+		{otcms:if $infoSysArr.IS_isNewsReply>0 && $IF_isReply>0}
+			<div style="width:1036px; overflow:hidden; text-align:center;" class="caClass"><div class="ca26Style"><script type="text/javascript">OTca('ot026');</script></div></div>
+			<div class="clr"></div>
+
+			<a id="scroll_reply" name="scroll_reply"></a>
+			<a id="backAjaxNavHeader" href="#scroll_reply"></a>
+			<div class="itemBox">
+				<div class="itemTitle">&nbsp;&nbsp;&nbsp;相关评论</div>
+				<div class="itemContent">
+					<dl class="newListLi replyFullBox">
+					<dd>
+						{otcms:if $infoSysArr.IS_newsReplyMode==2}
+							{otcms:diyFunc action="AppChangyan_NewsReplyBox" paraStr="{otcms:$IF_ID}" paraNote="文章ID"}
+
+						{otcms:else}
+							<div id="lastReplyBox"></div>
+							<div id="replyList"></div>
+
+							<div class="height10"></div>
+							<div class="clr"></div>
+
+							<div id="replyWrite"></div>
+						{otcms:/if}
+					</dd>
+					</dl>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="clr"></div>
+		{otcms:/if}
+	</div>
+	<div class="clr"></div>
+</div>
+<div class="clr"></div>
+
+{otcms:include file="bottom.html"}

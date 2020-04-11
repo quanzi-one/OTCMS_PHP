@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>网站地图 - {otcms:$sysArr.SYS_title}</title>
+	<meta name="keywords" content="{otcms:$siteKeywords}" />
+	<meta name="description" content="{otcms:$siteDescription}" />
+
+	<meta name="robots" content="all" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="{otcms:$webPathPart}template/default/skin/{otcms:$tplSysArr.TS_skinName}/style.css?v={otcms:$siteVer}" type="text/css" media="all" id="webSkin" />
+
+	<style>
+	.topLogo h1		{ display:none; }
+	.areaTitle		{ background:#fafafa; border:1px #eeeeee solid; border-left:none;border-right:none; padding:8px; }
+	.areaTitle h2	{ color:#888888; font-size:16px; }
+	.areaTitle .homeDiv{ float:right;margin-top:4px; }
+	.areaTitle .homeDiv a{ color:#1f6cb3; }
+	.areaTitle .homeDiv a:hover{ color:red; }
+	.linkbox	{ border-bottom:1px #eeeeee solid; padding:15px 8px 15px 8px; }
+	.linkbox h3	{ color:#888888; font-size:16px; }
+	.linkbox h3 a{ color:#1f6cb3; font-size:14px; }
+	.linkbox h3 a:hover{ color:red; font-size:14px; }
+	.linkbox ul	{ list-style:none; }
+	.linkbox ul li	{ float:left; padding:10px; width:170px; }
+	</style>
+</head>
+<body style="background-image:none; margin-top:0; padding-top:0;">
+
+
+<div id="mainBody">
+	<div class="topLogo list">
+		<h1><a href='./'>{otcms:$sysArr.SYS_title}</a></h1>
+		{otcms:$siteLogo}
+	</div>
+	<div class="clr"></div>
+
+	<div class="areaTitle">
+		<div class="homeDiv" class="font2_2"><a href='./'>返回首页</a></div>
+		<h2>网站地图</h2>
+    </div>
+
+	{otcms:$sitemapContent}
+
+	<!-- <div class="linkbox">
+		<h3><a href='#'></a></h3>
+		<ul>		
+			<li><a href='#'></a></li>
+			<li><a href='#'></a></li>
+			<li><a href='#'></a></li>
+		</ul>
+		<div class="clr"></div>
+	</div>
+	<div class="clr"></div> -->
+
+</div>
+
+</body>
+</html>

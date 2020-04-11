@@ -1,0 +1,72 @@
+<div class="caClass rightCa0 ca11Style"><script type="text/javascript">OTca('ot011');</script></div>
+<div class="clr"></div>
+
+{otcms:if $rightMenuItemID>0 && $isRightMenu>0}
+	<div class="typeBox">
+	<dl>
+		<dt>{otcms:$rightMenuItemName}</dt>
+		<dd class="liBox{otcms:$isRightMenu}" style="min-height:auto;height:auto;">
+			<ul>
+				{otcms:diyFunc action='SubRightNavMenu' typeID={otcms:$rightMenuItemID}}
+			</ul>
+		</dd>
+	</dl>
+	</div>
+	<div class="clr"></div>
+	<div class="height5"></div>
+	<div class="clr"></div>
+{otcms:/if}
+
+{otcms:if $rightItemNewNum>0}
+	<div class="typeBox">
+	<dl>
+		<dt>本栏最新</dt>
+		<dd class="listArrow1">
+			<ul>
+				{otcms:diyFunc action='FontItem' type="new{otcms:$rightItemID}" level={otcms:$rightItemLevel} num={otcms:$rightItemNewNum} isDate='1' isType='0'}
+			</ul>
+		</dd>
+	</dl>
+	</div>
+	<div class="clr"></div>
+
+	<div class="height5"></div>
+	<div class="clr"></div>
+	<div class="caClass rightCa0 ca15Style"><script type="text/javascript">OTca('ot015');</script></div>
+{otcms:/if}
+
+{otcms:if $rightItemRecomNum>0}
+	<div class="typeBox">
+	<dl>
+		<dt>本栏推荐</dt>
+		<dd class="listArrow1">
+			<ul>
+				{otcms:diyFunc action='FontItem' type="recom{otcms:$rightItemID}" level={otcms:$rightItemLevel} num={otcms:$rightItemRecomNum} isDate='0' isType='0'}
+			</ul>
+		</dd>
+	</dl>
+	</div>
+	<div class="clr"></div>
+
+	<div class="height5"></div>
+	<div class="clr"></div>
+{otcms:/if}
+
+{otcms:if $rightItemHotNum>0}
+	<div class="typeBox">
+	<dl>
+		<dt>阅读排行</dt>
+		<dd class="listArrow1">
+			<ul>
+				{otcms:diyFunc action='FontItem' type="readNum{otcms:$rightItemID}" level="{otcms:$rightItemLevel}" num={otcms:$rightItemHotNum} isDate='0' isType='0'}
+			</ul>
+		</dd>
+	</dl>
+	</div>
+	<div class="clr"></div>
+{otcms:/if}
+
+<div class="floatWin caClass rightCa0 ca12Style">
+	<script type="text/javascript">OTca('ot012');</script>
+</div>
+<div class="clr"></div>

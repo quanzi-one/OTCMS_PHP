@@ -1,0 +1,52 @@
+	<div class="clr"></div>
+</div>
+<div class="clr"></div>
+
+<div class="topBody">
+	<div class="bottomBox">
+		<div class="caClass ca13Style"><script type="text/javascript">OTca('ot013');</script></div>
+		
+		{otcms:diyFunc action='AppTplYule_LinkBox'}
+
+		<div class="height10"></div>
+		<div class="clr"></div>
+
+		<div class="bottomMenu">
+			{otcms:diyFunc action='BottomMenu'}
+		</div>
+
+		<div class="bottomLine"></div>
+		<div class="bottomCopyright">
+			{otcms:$siteCopyright}
+		</div>
+
+		<div id="htmlBg"><img src="{otcms:$currTplDir}images/bg.jpg" alt=""></div>
+	</div>
+	<div class="clr"></div>
+</div>
+
+<span class="caClass ca19Style"><script type="text/javascript">OTca('ot019');</script></span>
+
+{otcms:$siteBottomCode}
+
+
+<script language="javascript" type="text/javascript" src="{otcms:$currTplDir}js/top.js?v={otcms:$siteVer}"></script>
+	{otcms:if $webTypeName == "home"}
+<script language="javascript" type="text/javascript" src="{otcms:$currTplDir}js/index.js?v={otcms:$siteVer}"></script>
+	{otcms:elseif $webTypeName == "show"}
+<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}js/replyAndMessage.js?v={otcms:$siteVer}"></script>
+<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}js/newsShow.js?v={otcms:$siteVer}"></script>
+	{otcms:elseif $webTypeName == "message"}
+<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}js/replyAndMessage.js?v={otcms:$siteVer}"></script>
+<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}js/message.js?v={otcms:$siteVer}"></script>
+	{otcms:elseif "|bbsShow|bbsHome|bbsWrite|"|strpos:$webTypeName !== false}
+<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}js/replyAndMessage.js?v={otcms:$siteVer}"></script>
+<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}js/app/bbs.js?v={otcms:$siteVer}"></script>
+	{otcms:/if}
+
+<script language='javascript' type='text/javascript'>JsWriteBottom();</script>
+
+{otcms:$areaBottom1}
+
+</body>
+</html>

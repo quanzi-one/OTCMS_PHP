@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /rss.php
+Disallow: /news_deal.php
+Disallow: /configJs.php
+
+# *** 程序自动生成区 START (请勿删除该行) ***
+# *** 程序自动生成区 END (请勿删除该行) ***

@@ -1,0 +1,14 @@
+
+/* 页头菜单导航及其子菜单 */
+.topnav li ul.subnav {
+	width:auto; min-width:30px;
+}
+.topnav li ul.subnav li{
+	width:auto; min-width:30px; white-space:nowrap;
+}
+.topnav li ul.subnav li a {
+	width:auto; white-space:nowrap;
+}
+
+.mainMenu .topnav .a, .fullMenu .topnav .a	{ width:auto; padding:0 8px 0 8px; }
+.mainMenu .topnav .b, .fullMenu .topnav .b	{ width:auto; padding:0 8px 0 8px; }

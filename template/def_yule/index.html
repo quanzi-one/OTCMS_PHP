@@ -1,0 +1,107 @@
+{otcms:include file="top.html"}
+
+<div class="areaL">
+	<div class="itemBox">
+		<div class="itemTitle searchTitle"> 
+			<i class="layui-icon searchIco"></i>
+			关键词为2个字搜索最精准
+		</div>
+		<div class="itemContent searchBody">
+			<form id="referForm" name="referForm" method="get" action="" onsubmit="return CheckRefForm()">
+			<input type="hidden" id="mudi2" name="mudi2" value="refer" />
+			<input type="hidden" id="refMode" name="refMode" value="theme" />
+			关键词：<input name="refContent" type="text" id="refContent" size="12" style="width:150px;">
+			<input value=" 搜 索 " type="submit" name="searchsubmit">  
+			<input value=" 重 置 " type="reset" name="searchsubmit">  
+			</form>
+			<div class="clr"></div>
+
+			<div id="flashBox"></div>
+			{otcms:if $tplSysArr.TS_homeFlashMode>0}
+				{otcms:diyFunc action='FlashBox' mode={otcms:$tplSysArr.TS_homeFlashMode} width='388' height='318' num={otcms:$tplSysArr.TS_homeFlashNum}}
+			{otcms:/if}
+			<div class="caClass leftCa0 ca18Style"><script type="text/javascript">OTca('ot018');</script></div>
+		</div>
+	</div>
+
+
+	{otcms:* 精彩推荐 左侧 *}
+	{otcms:if $tplSysArr.TS_isHomeRecom!=0}
+	<div class="height5"></div>
+	<div class="clr"></div>
+	<div class="itemBox recomItem">
+		<div class="itemTitle itemTitle2">精彩推荐</div>
+		<div class="itemContent">
+			<dl class="itemListDl">
+			<dd class="listArrow3">
+				{otcms:diyFunc action='RecomList'}
+			</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="clr"></div>
+	{otcms:/if}
+
+	{otcms:* 网站公告 *}
+	{otcms:if $tplSysArr.TS_isHomeAnnoun!=0}
+	<div class="height5"></div>
+	<div class="clr"></div>
+	<div class="itemBox">
+		<div class="itemTitle itemTitle2"><a href="{otcms:$announMoreUrl}"><span></span>{otcms:$tplSysArr.TS_homeAnnounName}</a></div>
+		<div class="itemContent">
+			<dl class="itemListDl">
+			<dd class="listArrow3">
+				{otcms:diyFunc action='FontItem' type='announ' level='0' num={otcms:$tplSysArr.TS_homeAnnounNum} isDate='1' isType='0'}
+			</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="clr"></div>
+	{otcms:/if}
+
+</div>
+<div class="areaR">
+	<div class="itemBox">
+		<div class="itemTitle newTitle">
+			<i class="layui-icon newIco"></i>
+			今日已更新 <span class="newRed">{otcms:diyFunc action='StatiNewsCount' type="today"}</span> 个资源
+			&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+			<i class="layui-icon newIco"></i>
+			本站一共分享了 <span class="newRed">{otcms:diyFunc action='StatiNewsCount' type=""}</span> 个资源
+		</div>
+		<div class="itemContent">
+			<div class="textCenter">
+				<div id="newTabMark">　</div>
+				&ensp;&ensp;&ensp;
+				<input type="button" value="上一页" onclick="newGoPage(1)">&ensp;
+				<input type="button" value="下一页" onclick="newGoPage(2)">&ensp;
+				提示：需要看更多资源可以在左边翻页哦
+			</div>
+			<div id="newListArea" class="newListDL" style="{otcms:$homeNewStyle}">
+				<ul>
+				{otcms:diyFunc action='AppTplYule_NewList' paraStr="{otcms:$tplSysArr.TS_homeNewNum},5" paraNote="每版数量，版数"}
+				</ul>
+			</div>
+			<div class="clr"></div>
+			<div class="caClass leftCa0 ca8Style"><script type="text/javascript">OTca('ot008');</script></div>
+		</div>
+	</div>
+</div>
+<div class="clr"></div>
+
+<div class="height5"></div>
+<div class="clr"></div>
+
+{otcms:diyFunc action='MarImgBox' num={otcms:$tplSysArr.TS_homeMarImgNum}}
+
+<div class="caClass ca5Style">
+	<script type="text/javascript">OTca('ot005');</script>
+</div>
+<div class="clr"></div>
+
+<div class="homeItem">
+	{otcms:diyFunc action='AppTplYule_ItemList3' paraStr='0' paraNote="默认数量"}
+</div>
+<div class="clr"></div>
+
+{otcms:include file="bottom.html"}

@@ -1,0 +1,243 @@
+/* V1.65_20160901 */
+
+@import url(../../template/share.css);
+
+h1, h2, h3, h4, h5, h6, ul, ol, dl, dt, dd, li, body, form, p { padding:0; margin:0; }
+html	{ overflow-y:scroll; overflow-x:hidden; }	/* overflow-x:hidden;防止QQ客服右侧默认显示出现横向滚动条 */
+
+img		{ border:0; }
+ul, ol	{ list-style-type:none; }
+input	{ font-size:13px; font-family:simsun,"Microsoft YaHei"; }
+textarea	{ font-size:13px; font-family:simsun,"Microsoft YaHei"; line-height:1.2; }
+a			{
+	font-size:14px; color:#000;
+}
+a:link		{
+	text-decoration:none;
+}
+a:visited	{
+	text-decoration:none;
+}
+a:hover		{
+	text-decoration:none;
+}
+a:active	{
+	text-decoration:none;
+}
+
+.padd5td td	{ padding:5px !important; }
+.padd8td td	{ padding:8px !important; }
+.padd5 td td,.padd8 td td	{ padding:0px !important; }
+
+
+
+/* *** 通用布局样式 START *** */
+body	{
+	margin:0 auto; font-size:14px; color:#000000; line-height:1.2; font-family:"Microsoft YaHei",simsun,Arial,sans-serif;
+}
+#topBody,.topBody		{ width:100%; height:70px; margin:0 auto; text-align:left; background:#0084ca; }
+#mainBody,.mainBody		{ width:1170px; margin:0 auto; text-align:left; }
+#mainBody1,.mainBody1	{ width:1037px; margin:0 auto; text-align:left; }
+#bottomBody,.bottomBody	{ width:100%; margin:0 auto; text-align:left; }
+
+.topArea	{ width:1180px; height:70px; margin:0px auto; }
+.topArea .logoBox	{ float:left;width:200px;height:100%; background:url(logo.png) 0 3px; }
+.topArea .rMenu		{ float:left;width:980px;height:100%; text-align:right; color:#ffffff; }
+.topArea .rMenu ul	{ float:right; }
+.topArea .rMenu li	{ float:left;color:#ffffff; padding:0 30px;margin:20px 0;height:30px;line-height:30px;font-size:16px; border-left:1px #0076b5 solid; }
+.topArea .rMenu li a	{ color:#ffffff;font-size:16px; }
+.topBody2		{ width:100%; height:30px; margin:0 auto; background:#f6f6f6; }
+
+.leftBox	{ float:left;width:195px; }
+.leftBox .menu	{ width:180px; }
+.leftBox .menu .item	{ width:160px; height:36px; line-height:36px; background-color:#01629b; color:#fff; padding:0 10px; }
+.leftBox .menu .item .arrow {  }
+.leftBox .menu .sub	{ width:178px; }
+.leftBox .menu .sub li	{ width:148px; height:36px; line-height:36px; padding-left:30px; border: 1px solid #ddd; border-top: none; }
+.rightBox	{ float:left; width:955px; background-color:#f7f7f7; padding:0 10px 10px 10px; }
+.rightBox .areaBox	{ float:left; width:422px; background-color:#5cb85c; color:#fff; margin:0 4px 0 15px; padding:15px; font-family:"Microsoft YaHei",simsun,Arial,sans-serif; }
+.rightBox .areaColor	{ background-color:#2680b4; }
+.rightBox .infoBox	{ float:left; width:452px;margin:0 0 0px 15px; }
+.rightBox .announBox	{ float:left; width:452px;margin:0 0 0px 20px; }
+
+.areaBox .face	{ float:left;padding:0 30px 0 10px; }
+.areaBox .face .fa { font-size: 50px;margin-bottom: 30px; }
+.areaBox .big	{ float:left; }
+.areaBox .big small,.areaBox .one small { opacity:0.8; font-size:14px; }
+.areaBox .big h4 { font-size:28px; margin-top:5px; }
+.areaBox .one	{ float:left; }
+.areaBox .one h5 { font-size:18px; margin-top:5px; width:140px; }
+.areaBox .one h6 { font-size:14px; margin-top:5px; width:140px; font-family:simsun,"Microsoft YaHei"; }
+.areaBox .btn { float:right; margin-top:10px; }
+.areaBox .btn a { color: #333;background-color: #fff;border-color: #ccc;text-align: center;cursor: pointer;border: 1px solid transparent;white-space: nowrap;padding: 4px 12px 4px 12px;font-size: 14px; }
+
+hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #eee; }
+
+.infoBox .titleBox		{ width:422px;background-color: #fff;padding: 7px 15px;border-bottom: solid 3px #f7f7f7; }
+.infoBox .titleBox h4	{ font-size: 18px;font-weight:normal; font-family:"Microsoft YaHei",simsun,Arial,sans-serif; }
+.infoBox .titleBox .moneyBtn a	{ float:right;color:#2680b4; }
+.infoBox .item { height:50px; border-left:2px solid #5cb85c; background:#fff; padding:7px 0 0 7px; border-bottom:solid 3px #f7f7f7;display: block; font-family:simsun,"Microsoft YaHei"; }
+.infoBox .item .serNum		{ float:left; width:49px; font-size: 20px; color: #999; text-align:center; }
+.infoBox .item .cont		{ float:left; width:305px; padding:0 15px; }
+.infoBox .item .cont .number	{ color: #999; margin:8px 0 5px 0; }
+.infoBox .item .cont .num1		{ font-weight:bold;font-size:16px;padding:0 5px;color:blue; }
+.infoBox .item .cont .num2		{ font-weight:bold;font-size:16px;padding:0 5px;color:red; }
+.infoBox .item .cont .num3		{ font-weight:bold;padding:0 5px;color:#000; }
+.infoBox .item .func		{ float:left; width:29px; padding:0 15px; }
+.infoBox .item .func a	{ float:right;color:#2680b4; }
+
+.announBox .titleBox		{ width:422px;background-color: #fff;padding: 7px 15px;border-bottom: solid 3px #f7f7f7; }
+.announBox .titleBox h4	{ font-size: 18px;font-weight:normal; font-family:"Microsoft YaHei",simsun,Arial,sans-serif; }
+.announBox .titleBox .moneyBtn a	{ float:right;color:#2680b4; }
+.announBox .item { height:50px; background:#fff; padding:7px 0 0 7px; border-bottom:solid 3px #f7f7f7;display: block; font-family:simsun,"Microsoft YaHei"; }
+.announBox .item .serNum		{ float:left; width:49px; font-size: 20px; color: #999; text-align:center; }
+.announBox .item .cont		{ float:left; width:340px;height:40px;overflow:hidden; padding:0 15px;line-height:1.4; }
+.announBox .item .cont a	{ color:#2680b4; }
+.announBox .item .cont .number	{ color: #999; margin:2px 0 5px 0; }
+.announBox .item .date { float:left; background-color: #2680b4; color: #fff; width: 50px; height:32px; padding:5px; margin:0 5px; text-align: center; margin-left: auto; margin-right: auto; line-height:1.4; }
+
+.copyright	{ font-size: 12px;color: #fff;background-color: #2680b4;margin-top: 30px;padding: 15px 0;text-align: center; }
+.copyright a	{ color: #fff; }
+
+
+.loginBox		{ width: 320px;background: #fbfbfb;padding: 20px 60px;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px;margin:0 auto; margin-top:5px;margin-bottom:15px; }
+.loginBox h2	{ font-size:26px;color:#ff4800;margin-bottom:20px; font-family:"Microsoft YaHei",simsun,Arial,sans-serif; }
+.loginBox .input{ margin:13px 0 2px 0; } /*  min-height:44px; */
+.loginBox .input input[type=text],.loginBox .input input[type=password]{ background:url(btnBg.png) no-repeat;text-indent:1em; margin-bottom:3px; }
+.loginBox .text {
+    display: block;
+    padding: 6px 12px;
+    width: 276px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    background-image: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    color: #555;
+    font-size: 14px;
+    line-height: 2;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.loginBox .subBtn {
+    border-color: #2e6da4;background-color: #337ab7;color: #fff;cursor:pointer; font-family:"Microsoft YaHei",simsun,Arial,sans-serif;
+	width:300px;height:52px;border-radius: 2px;font-size: 25px;background: #ff6600;margin-bottom:15px; border-color: transparent;
+}
+
+.loginBox .checkbox	{ position:relative;margin-left:0px;margin-right:5px;top:2px; }
+.loginBox .ckbFont	{ display:inline-block;font-size:12px;color:#a7a7a7;font-weight:normal!important;margin-top:-7px!important; }
+.loginBox .bottom		{ padding-bottom:6px; }
+.loginBox .bottLine	{ height:2px;margin-left:-30px;margin-right:-30px;border-bottom:1px solid #f2f2f2; }
+.loginBox .reg	{ font-size:14px;color:#a7a7a7;font-weight:normal!important; }
+.loginBox .reg a	{ color:#a7a7a7; }
+.loginBox .missPwd	{ float:right;font-size:14px;color:#a7a7a7;font-weight:normal!important; }
+.loginBox .missPwd a	{ color:#a7a7a7; }
+.loginBox input.username{ background-position:6px 11px !important; }
+.loginBox input.userpwd	{ background-position:6px -29px !important; }
+.loginBox input.verCode	{ background-position:7px -65px !important; }
+.loginBox input.mail	{ background-position:7px -140px !important; }
+.loginBox input.weixin	{ background-position:7px -173px !important; }
+.loginBox input.phone	{ background-position:7px -104px !important; }
+.loginBox input.qq		{ background-position:7px -207px !important; }
+.loginBox input.card	{ background-position:7px -240px !important; }
+.loginBox input.ww		{ background-position:7px -269px !important; }
+.loginBox input.realname{ background-position:7px -303px !important; }
+.loginBox input.verCode2{ background-position:7px -343px !important; }
+.loginBox .regNote	{ border:1px #999 solid; width:290px;padding:5px;margin:8px 0; line-height:1.5;font-size:12px; }
+.loginBox .pointItem	{ float:left;font-size:19px;font-weight:bold;height:33px;padding-top:5px;cursor:pointer; }
+.loginBox .pointCurr	{ float:left;font-size:24px;font-weight:bold;height:38px;padding-top:0px;color:#ff4800;background:url(loginPoint.png) no-repeat 50% 0; background-position:bottom; }
+.loginBox .pointSpace	{ float:left;width:16px; }
+.loginBox .inputBtn	{ font-size:16px;color:blue;cursor:pointer; }
+
+.fullBox		{ width:897px; background:#ffe5e5; border:1px solid #ff0000; color:#ff0000; padding:8px 12px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; margin:10px 15px 15px 15px; text-align:left; line-height:1.6; }
+.fullBox2		{ margin-left:0; margin-right:0; width:869px; }
+
+.otherLogin		{ color:#ababab;padding-top:15px; }
+.otherLogin p	{ padding-bottom:10px; }
+.otherLogin a	{ color:transparent;margin:9px 0;padding:0 10px; }
+
+.pointBox	{
+	background-color: #fdfcfc;
+	padding: 7px 15px;
+	border-bottom: solid 3px #f7f7f7;
+	color: #333;
+}
+.pointBox h4 {
+    font-size: 16px; font-family:simsun,"Microsoft YaHei";
+}
+
+.mainBox		{ padding:15px 30px 30px 30px;background: #fdfcfc; }
+.mainBox input[type=text],.mainBox input[type=password],.mainBox textarea,.mainBox select		{ padding:5px; }
+.revInfoBox		{ width:700px;margin:0 auto; }
+.revInfoBox td	{ padding:5px; }
+
+.mainBox .announ	{ padding:8px 12px; margin-bottom:12px; background:#ffe5e5; border:1px solid #ff0000; border-radius:2px; color:#ff0000; line-height:1.6; font-size:14px; }
+.mainBox .colorArea	{ padding:8px 12px; margin-bottom:12px; background:#fff3e5; border:1px solid #ff8800; border-radius:2px; color:#000000; line-height:1.6; font-size:14px; }
+.mainBox .btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 4px 16px 4px 16px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.mainBox .subBtn {
+    color: #fff;
+    background-color: #2680b4;
+    border-color: #22719f;
+}
+.mainBox .subBtn2 {
+    color: #fff;
+    background-color: #2680b4;
+    border-color: #22719f;
+	height:29px !important;
+	padding-top:3px !important;
+}
+.mainBox .subBtn3 {
+    color: #fff;
+    background-color: #26b450;
+    border-color: #229f48;
+	height:29px !important;
+	padding-top:3px !important;
+}
+.mainBox .defBtn {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.mainBox .defBtn2 {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+	height:29px !important;
+	padding-top:3px !important;
+}
+.userNote	{ width:200px;border:none;border-bottom:1px #999 solid;padding:3px; }
+
+.tabList1		{ width:100%;border-top:#d4d4d4 1px solid;border-right:#d4d4d4 1px solid; background-color:#fff; font-family:simsun,"Microsoft YaHei"; }
+.tabList1 thead	{ background-color:#fdeab1; padding:8px; }
+.tabList1 thead td	{ padding:8px; }
+.tabList1 td	{ border-left:#d4d4d4 1px solid;border-bottom:#d4d4d4 1px solid;font-size:14px;padding:5px; }
+.tabList1 td td	{ border:none; }
+
+.tabItem	{ float:left; min-width:170px; height:37px; text-align:center; line-height:37px; background:#f3f7f8; border:solid 1px #d3dbde; font-size:14px; color:#000; padding-left:10px; padding-right:10px; margin:8px 10px 8px 10px; }
+.tabItem a	{ color:#000; }
+
+.tabColorTr, .tabColorTr .subColor		{ background-color:#f9f9f9; }
+.tabColorTrOver, .tabColorTrOver .subColor	{ background-color:#fff6d1; }
+
+.tabFont2 td	{ font-size:12px; }

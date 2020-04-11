@@ -1,0 +1,47 @@
+
+/* Ωπµ„Õº */
+.FocusImgFrame {
+	box-sizing:content-box; border:1px solid #dee0cb;
+}
+.FocusImg {
+	box-sizing:content-box; background:#f3f4ee; position:relative; width:auto; border:#fff;
+}
+.FocusImg .BigPic {
+	box-sizing:content-box; position:relative; zoom:1; padding:0px; text-align:center; overflow:hidden; background:#000;
+}
+.FocusImg .TitleBox {
+	box-sizing:content-box; overflow:hidden; font-size:12px; font-weight:bold; color:#fff; text-align:center; position:absolute; bottom:0px; right:0px; z-index:50;
+}
+.FocusImg .TitileBg {
+	box-sizing:content-box; overflow:hidden; background-color:#4c74a6; position:absolute; z-index:49; bottom:0px; right:0px; opacity:0.7;filter:alpha(opacity=70);
+}
+.FocusImg a:link,.FocusImg a:visited{
+	box-sizing:content-box; color:#fff; text-decoration:none;
+}
+.FocusImg a:hover{
+	box-sizing:content-box; color:#fff; text-decoration:none;
+}
+.FocusImg .Number{
+	box-sizing:content-box; font-size:11px; color:#fff; overflow:hidden; position:absolute; right:1px; z-index:50; text-align:right; height:13px; line-height:13px;
+}
+.FocusImg .NumberItem{
+	box-sizing:content-box; cursor:pointer; margin:0px 0px 0px 2px; padding:1px 2px; background-color:#000;font-family: ÀŒÃÂ;
+}
+.FocusImg .NumberItemOn{
+	box-sizing:content-box; cursor:pointer; margin:0px 0px 0px 2px; padding:1px 2px; background-color:none;font-family: ÀŒÃÂ;
+}
+.FocusImg .NumberItemBg{
+	box-sizing:content-box; height : 15px;width : 16px;position : absolute;z-index : 48;background-color:#4c74a6;opacity: 0.7;filter: alpha(opacity=70);
+}
+.FocusImg .BorderHack1{
+	box-sizing:content-box; background-color:#707070;position:absolute;z-index:51;height:1px;top:0px; left:0px;font-size:0px;overflow:hidden;
+}
+.FocusImg .BorderHack2{
+	box-sizing:content-box; background-color:#707070;position:absolute;z-index:51;width:1px;top:0px;right:0px;font-size:0px;overflow:hidden;
+}
+.FocusImg .BorderHack3{
+	box-sizing:content-box; background-color:#707070;position:absolute;z-index:51;height:1px;left:0px;font-size:0px;overflow:hidden;
+}
+.FocusImg .BorderHack4{
+	box-sizing:content-box; background-color:#707070;position:absolute;z-index:51;width:1px;left:0px;top:0px;font-size:0px;overflow:hidden;
+}

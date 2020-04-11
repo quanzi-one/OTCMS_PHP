@@ -1,0 +1,449 @@
+{otcms:include file="top.html"}
+
+
+{otcms:if $tplSysArr.TS_homeFlashMode>0 || $tplSysArr.TS_isHomeAnnoun==1 || $tplSysArr.TS_isHomeNew==1 || $tplSysArr.TS_isHomeRecom==1}
+<div class="htmlBody">
+<div class="height10"></div>
+<div class="clr"></div>
+<div class="mainBody">
+	<div class="areaL">
+		<div class="areaL1">
+			<div id="flashBox"></div>
+			{otcms:if $tplSysArr.TS_homeFlashMode>0}
+				{otcms:diyFunc action='FlashBox' mode={otcms:$tplSysArr.TS_homeFlashMode} width='300' height='245' num={otcms:$tplSysArr.TS_homeFlashNum}}
+				<div class="height5"></div>
+				<div class="clr"></div>
+			{otcms:/if}
+			<div class="caClass leftCa0 ca18Style"><script type="text/javascript">OTca('ot018');</script></div>
+
+			{otcms:* 精彩推荐 左侧 *}
+			{otcms:if $tplSysArr.TS_isHomeRecom==2}
+			<div class="typeBox">
+			<dl>
+				<dt>精彩推荐</dt>
+				<dd class="listArrow2" style="{otcms:$homeRecomStyle}">
+					{otcms:diyFunc action='RecomList'}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 网站公告 *}
+			{otcms:if $tplSysArr.TS_isHomeAnnoun==1}
+			<div class="typeBoxMore">
+			<dl>
+				<dt><div class="more"><a href="{otcms:$announMoreUrl}"></a></div><span class="pointer" onclick="document.location.href='{otcms:$announMoreUrl}';">{otcms:$tplSysArr.TS_homeAnnounName}</span></dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='FontItem' type='announ' level='0' num={otcms:$tplSysArr.TS_homeAnnounNum} isDate='1' isType='0'}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 会员积分排行 左侧 *}
+			{otcms:if $tplSysArr.TS_isHomeRankUsers==2}
+			<div class="typeBox">
+			<dl>
+				<dt>{otcms:$tplSysArr.TS_homeRankUsersName}</dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='RankUsers' num={otcms:$tplSysArr.TS_homeRankUsersNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 最新会员排行 左侧 *}
+			{otcms:if $tplSysArr.TS_isHomeNewUsers==2}
+			<div class="typeBox">
+			<dl>
+				<dt>{otcms:$tplSysArr.TS_homeNewUsersName}</dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='NewUsers' num={otcms:$tplSysArr.TS_homeNewUsersNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 会员签到排行 左侧 *}
+			{otcms:if $tplSysArr.TS_isQiandaoRank==2}
+			<div class="typeBox">
+			<dl>
+				<dt>{otcms:$tplSysArr.TS_qiandaoRankName}</dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='QiandaoRank' num={otcms:$tplSysArr.TS_qiandaoRankNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 热门文章 左侧 *}
+			{otcms:if $tplSysArr.TS_isHomeHot==2}
+			<div class="typeBox">
+			<dl>
+				<dt>{otcms:$tplSysArr.TS_homeHotName}</dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='HotList'}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 最新留言 左侧 *}
+			{otcms:if $tplSysArr.TS_isHomeMessage==2}
+			<div class="typeBoxMore">
+			<dl>
+				<dt><span class="pointer" onclick="var a=window.open('message.php');">{otcms:$tplSysArr.TS_homeMessageName}</span></dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='NewMessage' num={otcms:$tplSysArr.TS_homeMessageNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 最新评论 左侧 *}
+			{otcms:if $tplSysArr.TS_isHomeReply==2}
+			<div class="typeBox">
+			<dl>
+				<dt>{otcms:$tplSysArr.TS_homeReplyName}</dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='NewReply' num={otcms:$tplSysArr.TS_homeReplyNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+		</div>
+		<div class="areaL2">
+
+			{otcms:if $tplSysArr.TS_isHomeNew==1}
+			<div class="newBox">
+			<dl>
+				<dt><div class="more"><a href="{otcms:diyFunc action='Url_ListStr' type='new' page='0'}"></a></div></dt>
+				<dd class="listArrow0" style="{otcms:$homeNewStyle}">
+					{otcms:diyFunc action='NewList' num={otcms:$tplSysArr.TS_homeNewNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+		</div>
+	</div>
+	<div class="areaR">
+
+		<div class="caClass rightCa0 ca14Style"><script type="text/javascript">OTca('ot014');</script></div>
+
+		{otcms:* 会员签到 *}
+		{otcms:if $tplSysArr.TS_isHomeQiandao==1}
+		<div class="recomBox">
+		<dl>
+			<dt>{otcms:$tplSysArr.TS_homeQiandaoName}</dt>
+			<dd class="listArrow2">
+				
+				<div style="text-align:center;"><a {otcms:diyFunc action='AppQiandao_UrlModeStr' paraStr='pc'}><img id="qiandaoBtn" src="inc_img/qiandaoBtn.png" style="margin:5px;" /></a></div>
+				<div style="margin-top:8px;line-height:1.6;font-size:12px;">
+				</div>
+			</dd>
+		</dl>
+		</div>
+		<div class="clr"></div>
+		<div class="height5"></div>
+		<div class="clr"></div>
+		{otcms:/if}
+
+		{otcms:* 网站公告 右侧 *}
+		{otcms:if $tplSysArr.TS_isHomeAnnoun==2}
+		<div class="recomBox">
+		<dl>
+			<dt><div class="more"><a href="{otcms:$announMoreUrl}"></a></div><span class="pointer" onclick="document.location.href='{otcms:$announMoreUrl}';">{otcms:$tplSysArr.TS_homeAnnounName}</span></dt>
+			<dd class="listArrow1">
+				{otcms:diyFunc action='FontItem' type='announ' level='0' num={otcms:$tplSysArr.TS_homeAnnounNum} isDate='1' isType='0'}
+			</dd>
+		</dl>
+		</div>
+		<div class="clr"></div>
+		<div class="height5"></div>
+		<div class="clr"></div>
+		{otcms:/if}
+
+		{otcms:* 精彩推荐 *}
+		{otcms:if $tplSysArr.TS_isHomeRecom==1}
+		<div class="recomBox">
+		<dl>
+			<dt>精彩推荐</dt>
+			<dd class="listArrow2" style="{otcms:$homeRecomStyle}">
+				{otcms:diyFunc action='RecomList'}
+			</dd>
+		</dl>
+		</div>
+		<div class="clr"></div>
+		<div class="height5"></div>
+		<div class="clr"></div>
+		{otcms:/if}
+
+		{otcms:* 会员积分排行 右侧 *}
+		{otcms:if $tplSysArr.TS_isHomeRankUsers==3}
+		<div class="recomBox">
+		<dl>
+			<dt>{otcms:$tplSysArr.TS_homeRankUsersName}</dt>
+			<dd class="listArrow1">
+				{otcms:diyFunc action='RankUsers' num={otcms:$tplSysArr.TS_homeRankUsersNum}}
+			</dd>
+		</dl>
+		</div>
+		<div class="clr"></div>
+		<div class="height5"></div>
+		<div class="clr"></div>
+		{otcms:/if}
+
+		{otcms:* 最新会员排行 右侧 *}
+		{otcms:if $tplSysArr.TS_isHomeNewUsers==3}
+		<div class="recomBox">
+		<dl>
+			<dt>{otcms:$tplSysArr.TS_homeNewUsersName}</dt>
+			<dd class="listArrow1">
+				{otcms:diyFunc action='NewUsers' num={otcms:$tplSysArr.TS_homeNewUsersNum}}
+			</dd>
+		</dl>
+		</div>
+		<div class="clr"></div>
+		<div class="height5"></div>
+		<div class="clr"></div>
+		{otcms:/if}
+
+		{otcms:* 会员签到排行 右侧 *}
+		{otcms:if $tplSysArr.TS_isQiandaoRank==3}
+		<div class="recomBox">
+		<dl>
+			<dt>{otcms:$tplSysArr.TS_qiandaoRankName}</dt>
+			<dd class="listArrow1">
+				{otcms:diyFunc action='QiandaoRank' num={otcms:$tplSysArr.TS_qiandaoRankNum}}
+			</dd>
+		</dl>
+		</div>
+		<div class="clr"></div>
+		<div class="height5"></div>
+		<div class="clr"></div>
+		{otcms:/if}
+
+		{otcms:* 热门文章 右侧 *}
+		{otcms:if $tplSysArr.TS_isHomeHot==3}
+		<div class="recomBox">
+		<dl>
+			<dt>{otcms:$tplSysArr.TS_homeHotName}</dt>
+			<dd class="listArrow1">
+				{otcms:diyFunc action='HotList'}
+			</dd>
+		</dl>
+		</div>
+		<div class="clr"></div>
+		<div class="height5"></div>
+		<div class="clr"></div>
+		{otcms:/if}
+
+		{otcms:* 最新留言 右侧 *}
+		{otcms:if $tplSysArr.TS_isHomeMessage==3}
+		<div class="recomBox">
+		<dl>
+			<dt><span class="pointer" onclick="var a=window.open('message.php');">{otcms:$tplSysArr.TS_homeMessageName}</span></dt>
+			<dd class="listArrow1">
+				{otcms:diyFunc action='NewMessage' num={otcms:$tplSysArr.TS_homeMessageNum}}
+			</dd>
+		</dl>
+		</div>
+		<div class="clr"></div>
+		<div class="height5"></div>
+		<div class="clr"></div>
+		{otcms:/if}
+
+		{otcms:* 最新评论 右侧 *}
+		{otcms:if $tplSysArr.TS_isHomeReply==3}
+		<div class="recomBox">
+		<dl>
+			<dt>{otcms:$tplSysArr.TS_homeReplyName}</dt>
+			<dd class="listArrow1">
+				{otcms:diyFunc action='NewReply' num={otcms:$tplSysArr.TS_homeReplyNum}}
+			</dd>
+		</dl>
+		</div>
+		<div class="clr"></div>
+		<div class="height5"></div>
+		<div class="clr"></div>
+		{otcms:/if}
+
+		<div class="caClass rightCa0 ca8Style">
+			<script type="text/javascript">OTca('ot008');</script>
+		</div>
+		<div class="clr"></div>
+
+	</div>
+	<div class="clr"></div>
+</div>
+</div>
+{otcms:/if}
+
+
+{otcms:diyFunc action='AppIdcPro_TplHome'}
+
+
+<div class="htmlBody">
+<div class="mainBody">
+	{otcms:diyFunc action='MarImgBox' num={otcms:$tplSysArr.TS_homeMarImgNum}}
+
+	<div class="caClass ca5Style">
+		<script type="text/javascript">OTca('ot005');</script>
+	</div>
+	<div class="clr"></div>
+
+	<div class="height5"></div>
+	<div class="clr"></div>
+
+</div>
+</div>
+
+<div class="htmlBody">
+<div class="mainBody1">
+	{otcms:if $tplSysArr.TS_homeItemMode==1 || $tplSysArr.TS_homeItemMode==2}
+		<div class="areaL">
+			{otcms:diyFunc action='ItemList' num='0'}
+		</div>
+		<div class="areaR">
+			<div class="caClass rightCa0 ca20Style">
+				<script type="text/javascript">OTca('ot020');</script>
+			</div>
+
+			{otcms:* 会员积分排行 *}
+			{otcms:if $tplSysArr.TS_isHomeRankUsers==1}
+			<div class="typeBox">
+			<dl>
+				<dt>{otcms:$tplSysArr.TS_homeRankUsersName}</dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='RankUsers' num={otcms:$tplSysArr.TS_homeRankUsersNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 最新会员排行 *}
+			{otcms:if $tplSysArr.TS_isHomeNewUsers==1}
+			<div class="typeBox">
+			<dl>
+				<dt>{otcms:$tplSysArr.TS_homeNewUsersName}</dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='NewUsers' num={otcms:$tplSysArr.TS_homeNewUsersNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 会员签到排行 *}
+			{otcms:if $tplSysArr.TS_isQiandaoRank==1}
+			<div class="typeBox">
+			<dl>
+				<dt>{otcms:$tplSysArr.TS_qiandaoRankName}</dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='QiandaoRank' num={otcms:$tplSysArr.TS_qiandaoRankNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 热门文章 *}
+			{otcms:if $tplSysArr.TS_isHomeHot==1}
+			<div class="typeBox">
+			<dl>
+				<dt>{otcms:$tplSysArr.TS_homeHotName}</dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='HotList'}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 最新留言 *}
+			{otcms:if $tplSysArr.TS_isHomeMessage==1}
+			<div class="typeBox">
+			<dl>
+				<dt><span class="pointer" onclick="var a=window.open('message.php');">{otcms:$tplSysArr.TS_homeMessageName}</span></dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='NewMessage' num={otcms:$tplSysArr.TS_homeMessageNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			{otcms:* 最新评论 *}
+			{otcms:if $tplSysArr.TS_isHomeReply==1}
+			<div class="typeBox">
+			<dl>
+				<dt>{otcms:$tplSysArr.TS_homeReplyName}</dt>
+				<dd class="listArrow1">
+					{otcms:diyFunc action='NewReply' num={otcms:$tplSysArr.TS_homeReplyNum}}
+				</dd>
+			</dl>
+			</div>
+			<div class="clr"></div>
+			<div class="height5"></div>
+			<div class="clr"></div>
+			{otcms:/if}
+
+			<div class="floatWin caClass rightCa0 ca9Style">
+				<script type="text/javascript">OTca('ot009');</script>
+			</div>
+			<div class="clr"></div>
+
+		</div>
+		<div class="clr"></div>
+
+	{otcms:else}
+		{otcms:diyFunc action='ItemList3' num='0'}
+	{otcms:/if}
+
+
+</div>
+</div>
+<div class="clr"></div>
+
+
+{otcms:include file="bottom.html"}

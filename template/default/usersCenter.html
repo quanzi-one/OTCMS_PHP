@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="site_{otcms:$webTypeName}">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset={otcms:$siteCharset}">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=1048px, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>{otcms:$siteName}</title>
+	<meta name="keywords" content="{otcms:$siteKeywords}" />
+	<meta name="description" content="{otcms:$siteDescription}" />
+	{otcms:$siteBaseTag}
+	<link rel="icon" href="{otcms:$webPathPart}favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="{otcms:$webPathPart}favicon.ico" type="image/x-icon" />
+
+	<script language="javascript" type="text/javascript">
+	var webTypeName='{otcms:$webTypeName}';
+	var webDataID='{otcms:$webDataID}';
+	var dbPathPart='{otcms:$dbPathPart}';
+	var webPathPart='{otcms:$webPathPart}';
+	var jsPathPart='{otcms:$jsPathPart}';
+	var wapUrl='{otcms:$wapUrl}';
+	</script>
+	<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}js/inc/jquery.min.js?v={otcms:$siteVer}"></script>
+	<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}js/inc/common.js?v={otcms:$siteVer}"></script>
+	<script language="javascript" type="text/javascript" src="{otcms:$webPathPart}cache/js/configJs.js?v={otcms:$siteVer}&v2={otcms:$sysArr.SYS_jsTimeStr}"></script>
+
+	<link rel="stylesheet" href="{otcms:$webPathPart}inc_img/usersCenter/style.css?v={otcms:$siteVer}" type="text/css" media="all" id="webSkin" />
+	<link rel="stylesheet" href="{otcms:$webPathPart}tools/font-awesome/css/font-awesome.min.css?v={otcms:$siteVer}" type="text/css" media="all" />
+</head>
+<body style="{otcms:$webBodyStyleStr}" {otcms:$webBodyStr}>
+
+<div id="topBody">
+	<div class="topArea">
+		<div class="logoBox">
+		
+		</div>
+		<div class="rMenu">
+
+			{otcms:$webTop}
+
+		</div>
+	</div>
+</div>
+<div class="topBody2"></div>
+
+<div id="mainBody">
+	<div style="width:1170px;">
+	<div class="leftBox">
+
+		{otcms:$webMenu}
+
+	</div>
+	<div class="rightBox">
+
+		{otcms:$webContent}
+
+	</div>
+	</div>
+</div>
+<div class="clr"></div>
+
+<div id="bottomBody">
+	<div class="copyright">{otcms:$siteCopyright}</div>
+</div>
+
+</body>
+</html>

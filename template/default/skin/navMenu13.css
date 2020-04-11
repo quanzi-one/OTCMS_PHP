@@ -1,0 +1,14 @@
+
+/* 页头菜单导航及其子菜单 */
+.topnav li ul.subnav {
+	width:77px;
+}
+.topnav li ul.subnav li{
+	width:77px;
+}
+.topnav li ul.subnav li a {
+	width:77px;
+}
+
+.mainMenu .topnav .a, .fullMenu .topnav .a	{ width:76.8px; }
+.mainMenu .topnav .b, .fullMenu .topnav .b	{ width:76.8px; }

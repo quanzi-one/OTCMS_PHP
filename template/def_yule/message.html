@@ -1,0 +1,44 @@
+{otcms:include file="top.html"}
+
+<div class="subArea">
+	<div class="subAreaL">
+		<div class="itemBox">
+			<div class="itemTitle">&nbsp;&nbsp;&nbsp;{otcms:$areaName}</div>
+			<div class="itemContent">
+				<a id="scroll_message" name="scroll_message"></a>
+				<a id="backAjaxNavHeader" href="#scroll_message"></a>
+				<div class="pageBox">
+				<dl>
+					<dd class="messageBox">
+							{otcms:if $tplSysArr.TS_isMessage>0}
+						<div id="lastReplyBox"></div>
+								{otcms:if $tplSysArr.TS_messageMode==1}
+						<div id="replyWrite"></div>
+
+						<div class="height10"></div>
+						<div class="clr"></div>
+								{otcms:/if}
+						<div id="messageList"></div>
+								{otcms:if $tplSysArr.TS_messageMode==0}
+						<div class="height10"></div>
+						<div class="clr"></div>
+
+						<div id="replyWrite"></div>
+								{otcms:/if}
+							{otcms:else}
+								<center style="font-size:14px;margin:60px 0 50px 0;">{otcms:$tplSysArr.TS_messageCloseNote}</center>
+							{otcms:/if}
+					</dd>
+				</dl>
+				</div>
+				<div class="clr"></div>
+
+			</div>
+		</div>
+	</div>
+	<div class="subAreaR">
+		{otcms:include file="news_right.html"}
+	</div>
+</div>
+
+{otcms:include file="bottom.html"}

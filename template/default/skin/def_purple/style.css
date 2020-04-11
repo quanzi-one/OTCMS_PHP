@@ -1,0 +1,175 @@
+@import url(../style.css);
+
+.font2_1 { color:#8001b2; }
+a.font2_1:hover	{ color:#8001b2; }
+.font2_2 { color:#8001b2; }
+a.font2_2:hover	{ color:#8001b2; }
+
+
+
+/* *** 通用布局样式 START *** */
+body	{
+	background:#ffffff url(top_bg.gif) repeat-x;
+}
+
+.listArrow1 ul li	{ background:url(arrow1.gif) no-repeat 0 8px; }
+.listArrow2 ul li	{ background:url(arrow2.gif) no-repeat 0 8px; }
+.listArrow3 ul li	{ background:url(arrow3.gif) no-repeat 0 8px; }
+/* *** 通用布局样式 END *** */
+
+
+/* 页头样式 START */
+.topMenu .a	{ color:#8001b2; }
+.mainMenu .topnav		{
+	background:url(top_menuBg.gif) repeat-x top;
+}
+.mainMenu .topnav .a	{
+	background:url(top_menuOver.gif) no-repeat;
+}
+.mainMenu .topnav .c	{
+	background:url(top_menuDz.gif) no-repeat;
+}
+
+/* 页头菜单导航及其竖向下拉子菜单 */
+.topnav li ul.subnav {
+	border:1px #8002b1 solid;
+}
+.topnav li ul.subnav li a {
+	background:#8c0dbe;
+}
+.topnav li ul.subnav li a:hover {
+	background:#8002b1;
+}
+
+.fullMenu		{
+	background:url(top_menuFullBg.gif) repeat-x top;
+}
+.fullMenu .topnav .a	{ background:url(top_menuOver.gif) no-repeat; }
+.fullMenu .topnav .c	{ background:url(top_menuFullDz.gif) no-repeat; }	
+	
+	
+.searchBox .b .searchImg	{
+	background:url(top_searchDz.gif);
+	color:#8001b2;
+}
+.searchBox .b .searchBtn	{
+	background:url(top_searchBtn.gif);
+}
+/* 页头样式 END */
+
+
+/* 最新消息 START */
+.newBox dt	{
+	background:url(index_new.gif) no-repeat;
+}
+.newBox2 dt	{
+	background:url(index_new2.gif) no-repeat;
+}
+/* 最新消息 END */
+
+
+/* 精彩推荐 START */
+.recomBox dt	{
+	background:url(index_recom.gif) no-repeat;
+	color:#8001b2;
+}
+/* 精彩推荐 END */
+
+
+/* 次页全宽模式 START */
+.itemBox0 dt	{ color:#8001b2; background:url(item0.gif) no-repeat; }
+/* 次页700px宽模式 END */
+
+
+/* 首页栏目二栏式 START */
+.itemBox dt	{
+	color:#8001b2; background:url(item.gif) no-repeat;
+}
+/* 首页栏目二栏式 END */
+
+
+/* 首页栏目三栏式 START */
+.itemBox3 dt	{
+	color:#8001b2; background:url(item_3.gif) no-repeat;
+}
+/* 首页栏目三栏式 END */
+
+
+/* 友情链接 START */
+.logoBox dt	{
+	background:url(bottom_logo.gif) no-repeat;
+}
+/* 友情链接 END */
+
+
+/* 页尾样式 START */
+.bottomLine	{
+	background:#8001b2;
+}
+/* 页尾样式 END */
+
+
+/* 内容页、单篇页样式 START */
+.pageBox dt,.pageBoxMore dt	{
+	color:#8001b2;background:url(item3.gif) no-repeat;
+}
+.pageBoxMore dt	{
+	background:url(item3more.gif) no-repeat;
+}
+/* 内容页、单篇页样式 END */
+
+
+/* 内容页、通用页 START */
+.webBox .d .boxBorder	{ background:url(boxFull.gif); }
+/* 内容页、通用页 END */
+
+
+/* 内容页左右侧翻页 START */
+a.pagePrev,a.pageNext{ background:url(arrow.gif) no-repeat; }
+a.pageNext{ background-position:0 -300px; }
+/* 内容页左右侧翻页 END */
+
+
+/* 次页右侧框 START */
+.typeBox dt,.typeBoxMore dt	{
+	background:url(item2.gif) no-repeat;
+}
+.typeBoxMore dt	{
+	background:url(item2more.gif) no-repeat;
+}
+/* 次页右侧框 END */
+
+
+/* 评论区、相关文章区 START */
+.replyBox dt,.markBox dt	{
+	background:url(reply.gif) no-repeat;
+	color:#8001b2;
+}
+.replyBox .replyBtn		{ background:url(replyBtn.gif); }
+.newsFullBox dt		{ background:url(replyFull.gif) no-repeat; }
+/* 评论区、相关文章区 END */
+
+
+/* 留言本 START */
+.messageBox .replyBtn		{ background:url(messageBtn.gif); }
+/* 留言本 END */
+
+
+/* 论坛 START */
+/* 论坛 END */
+
+
+/* 内页右侧二级导航 START */
+.liBox1 ul li a {
+	background:#8c0dbe;
+}
+.liBox1 ul li a:hover {
+	background:#8002b1;
+}
+.liBox2 ul li a {
+	background:#8c0dbe;
+}
+.liBox2 ul li a:hover {
+	background:#8002b1;
+}
+/* 内页右侧二级导航 END */

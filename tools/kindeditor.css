@@ -1,0 +1,86 @@
+h1, h2, h3, h4, h5, h6, ul, ol, dl, dt, dd, li, body, form, p { padding:0; margin:0; }
+html	{ overflow-y:scroll; }
+
+img		{ border:0; }
+ul, ol	{ list-style-type:none; }
+a			{
+	font-size:12px; color:#444;
+	
+}
+a:link		{
+	text-decoration:none;
+	
+}
+a:visited	{
+	text-decoration:none;
+	
+}
+a:hover		{
+	text-decoration:underline;
+	
+}
+a:active	{
+	text-decoration:none;
+	
+}
+
+
+/* *** 共享 START *** */
+.input1		{ border:1px solid #b280a4; }
+.input2		{ border:1px solid #b280a4; }
+.textarea	{ border:1px solid #45484d; padding-top:2px; background:#efefef; }
+.button		{ border:none; cursor:pointer; }
+
+.block	{ display:block; }
+.left	{ float:left; }
+.right	{ float:right; }
+.pointer{ cursor:pointer; }
+.textCenter	{ text-align:center; }
+.textLeft	{ text-align:left; }
+.pToBr p	{ margin:0; padding:0; }
+.rankFont	{ padding-left:3px;width:22px;font-weight:bold;color:blue; } /*font-family:Georgia,Arial,Tahoma,Geneva;*/
+.height20	{ clear:both; height:20px; padding:0; overflow:hidden; }
+.height15	{ clear:both; height:15px; padding:0; overflow:hidden; }
+.height10	{ clear:both; height:10px; padding:0; overflow:hidden; }
+.height8	{ clear:both; height:8px; padding:0; overflow:hidden; }
+.height5	{ clear:both; height:5px; padding:0; overflow:hidden; }
+.height1	{ clear:both; height:1px; padding:0; overflow:hidden; }
+.padd3,.padd3 td,.padd3 li	{ padding:3px; }
+.padd5,.padd5 td,.padd5 li	{ padding:5px; }
+.padd8,.padd8 td	{ padding:8px; }
+
+.fontB		{ font-weight:bold; }
+.fontU		{ text-decoration:underline; }
+.fontDel	{ text-decoration:line-through; }
+
+.list ul	{ margin:0; padding:0; list-style:none; }
+.list ul li	{ float:left; overflow:hidden; }
+/* *** 共享 END *** */
+
+
+
+/* *** 全局通用字体样式 START *** */
+.font1_1	{ font-size:14px; color:#000000; font-family:simsun,"Microsoft YaHei",Arial; }
+a.font1_1:hover { font-size:14px; color:#535253; font-family:simsun,"Microsoft YaHei",Arial; }
+.font1_1d		{ font-size:14px; color:#a59ea3; font-family:simsun,"Microsoft YaHei",Arial; }
+a.font1_1d:hover{ font-size:14px; color:#b5b1b4; font-family:simsun,"Microsoft YaHei",Arial; }
+.font1_2	{ font-size:12px; color:#000000; font-family:simsun,"Microsoft YaHei",Arial; }
+a.font1_2:hover { font-size:12px; color:#535253; font-family:simsun,"Microsoft YaHei",Arial; }
+.font1_2d		{ font-size:12px; color:#a59ea3; font-family:simsun,"Microsoft YaHei",Arial; }
+a.font1_2d:hover{ font-size:12px; color:#b5b1b4; font-family:simsun,"Microsoft YaHei",Arial; }
+
+.font2_1 { font-size:14px; color:#bf3131; font-family:simsun,"Microsoft YaHei",Arial; }
+a.font2_1:hover	{ font-size:14px; color: #f45151; font-family:simsun,"Microsoft YaHei",Arial; }
+.font2_2 { font-size:12px; color:#bf3131; font-family:simsun,"Microsoft YaHei",Arial; }
+a.font2_2:hover	{ font-size:12px; color: #f45151; font-family:simsun,"Microsoft YaHei",Arial; }
+/* *** 全局通用字体样式 END *** */
+
+body {
+	margin: 0;
+	padding: 3px;
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 14px;
+	font-family: SimSun;
+	line-height: 1.4;
+}
