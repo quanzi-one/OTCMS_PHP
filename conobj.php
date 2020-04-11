@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);				// 显示除去 E_NOTICE 之外的所有错误信息
-
-header('Content-Type: text/html; charset=UTF-8');
+1111
+header('Content-111111Type: text/html; charset=UTF-8');
 
 /*
 	使用 X-Frame-Options 有三个可选的值：
