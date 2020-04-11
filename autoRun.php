@@ -13,7 +13,7 @@ $nowMonth	= TimeDate::Get('m');
 if ($autoRunSysFile = @include(OT_ROOT .'cache/php/autoRunSys.php')){
 	$autoRunSysArr = unserialize($autoRunSysFile);
 }else{
-	$Cache = new Cache();
+	$Cache = new Cache();ss
 	$Cache->Php('autoRunSys');
 	die('/* 加载autoRunSys配置文件失败，请重新刷新 */');
 }
