@@ -1,0 +1,47 @@
+<IfModule mod_rewrite.c>
+
+# 开启URL重写
+RewriteEngine On
+
+# URL重写的作用域
+# RewriteBase / 
+
+# http 跳转到 https
+# RewriteCond %{SERVER_PORT} !^443$
+# RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
+
+# 不带www跳转到带www（otcms 改为自己的域名即可）
+# RewriteCond %{HTTP_HOST} ^otcms\.com$ [NC]
+# RewriteRule ^(.*)$ http://www.otcms.com/$1 [L,R=301]
+
+# 屏蔽掉一些目录执行权限
+RewriteCond % !^$ 
+RewriteRule cache/(.*).(php)$ – [F]
+RewriteRule html/(.*).(php)$ – [F]
+RewriteRule inc_img/(.*).(php)$ – [F]
+RewriteRule js/(.*).(php)$ – [F]
+RewriteRule pay/(.*).(php)$ – [F]
+RewriteRule pluDef/(.*).(php)$ – [F]
+RewriteRule plugin/(.*).(php)$ – [F]
+RewriteRule smarty/(.*).(php)$ – [F]
+RewriteRule temp/(.*).(php)$ – [F]
+RewriteRule template/(.*).(php)$ – [F]
+RewriteRule tools/(.*).(php)$ – [F]
+RewriteRule upFiles/(.*).(php)$ – [F]
+RewriteRule web_config/(.*).(php)$ – [F]
+RewriteRule wap/cache/(.*).(php)$ – [F]
+RewriteRule wap/html/(.*).(php)$ – [F]
+RewriteRule wap/images/(.*).(php)$ – [F]
+RewriteRule wap/js/(.*).(php)$ – [F]
+RewriteRule wap/skin/(.*).(php)$ – [F]
+RewriteRule wap/template/(.*).(php)$ – [F]
+RewriteRule wap/tools/(.*).(php)$ – [F]
+RewriteRule wap/web_config/(.*).(php)$ – [F]
+
+# 专门用来检测是否支持伪静态（不要删除）
+RewriteRule ^readSoft.html$ readSoft.php
+
+# *** 程序自动生成区 START (请勿删除该行) ***
+# *** 程序自动生成区 END (请勿删除该行) ***
+
+</IfModule>
