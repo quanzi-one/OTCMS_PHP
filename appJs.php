@@ -10,6 +10,7 @@ switch ($mudi){
 	default :
 		die('// 无');
 }
+aa
 
 $DB->Close();
 

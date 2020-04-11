@@ -7,7 +7,7 @@ $jsPathPart		= '';
 require(dirname(__FILE__) .'/check.php');
 require(OT_ROOT .'inc/classTemplate.php');
 //require(OT_ROOT .'inc/classTplIndex.php');
-
+11
 $judCache = false;
 $cacheName='tpl_index';
 if ($retStr = Cache::CheckWebCache($cacheName,true)){ $judCache = true; }
